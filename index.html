@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mail">
+        <h2>Input an 11 digit Phone Number</h2>
+        <form name="form1" action="#">
+            <ul>
+                <li><input type='text' name='text1' /></li>
+                <li>&nbsp;</li>
+                <li class="submit"><input type="submit" name="submit" value="Submit"
+                        onclick="phonenumber(document.form1.text1)" /></li>
+                <li>&nbsp;</li>
+            </ul>
+        </form>
+    </div>
+    <script>
+        function phonenumber(inputtxt) {
+            var phoneno = /^\d{11}$/;
+            if (inputtxt.value.match(phoneno)) {
+                return true;
+            }
+            else {
+                alert("Not a valid Phone Number");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
